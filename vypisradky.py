@@ -5,7 +5,8 @@
 # Řádek 3
 # Řádek 4
 # Funguje? Dej to do Gitu
+cisloradku = 0
 
-for radek in range(4):
-    cisloradku = 0
-    print("Radek", cisloradku + 1)
+for radek in range(5):
+    print("Radek", cisloradku)
+    cisloradku = cisloradku + 1
