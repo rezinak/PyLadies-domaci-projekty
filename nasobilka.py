@@ -6,11 +6,11 @@
 # 0 4 8 12 16
 # Funguje? Dej to do Gitu!
 
-
-for radek in range(5):
-    for cislo in range(5):
-        print(cislo * radek, " ", end="")
-    print()
+#FIGL OD KUBICKA
+# for radek in range(5):
+#     for cislo in range(5):
+#         print(cislo * radek, " ", end="")
+#     print()
 
 multiplicator = 0
 nasobeneCislo = 0

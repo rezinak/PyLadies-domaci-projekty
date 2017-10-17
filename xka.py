@@ -11,5 +11,6 @@ for pocetRadku in range (5):
         print(" X ", end = "")
     print("")
 
-for pocetRadku in range(5):
-    print("X " * 5)
+#FIGL OD KUBICKA
+# for pocetRadku in range(5):
+#     print("X " * 5)
