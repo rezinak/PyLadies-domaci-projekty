@@ -10,3 +10,6 @@ for pocetRadku in range (5):
     for naRadek in range(5):
         print(" X ", end = "")
     print("")
+
+for pocetRadku in range(5):
+    print("X " * 5)
