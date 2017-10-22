@@ -7,3 +7,10 @@
 for pocetradek in range(1, 5):
     #for pocetx in range(1):
     print(pocetradek * " X")
+
+print("jeste jinak:")
+for pocetradek in range(1,5):
+    for pocetx in range (pocetradek):
+        pocetx = "X" * pocetradek
+        print(" X", end = "")
+    print()
