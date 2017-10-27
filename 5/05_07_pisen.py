@@ -16,11 +16,12 @@ When logic and proportion have fallen sloppy dead
 And the white knight is talking backwards
 And the red queen's off with her head
 Remember what the dormouse said
-Feed your head, feed your head"""
+Feed your head, feed your head K"""
 
+lyrics.lower
 pocetk = 0
 
 for i in range(len(lyrics)):
-    if lyrics[i] == "k":
+    if lyrics.lower()[i] == "k":
         pocetk = pocetk + 1
 print(pocetk)
