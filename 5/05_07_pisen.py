@@ -19,8 +19,10 @@ Remember what the dormouse said
 Feed your head, feed your head K"""
 
 pocetk = 0
+lyrics = lyrics.lower()
+
 
 for i in range(len(lyrics)):
-    if lyrics.lower()[i] == "k":
+    if lyrics[i] == "k":
         pocetk = pocetk + 1
 print(pocetk)
