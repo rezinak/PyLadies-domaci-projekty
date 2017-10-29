@@ -57,7 +57,22 @@ def tah_hrace(pole):
 
 def tah_pocitace(pole):
     while True:
-        vybrana_pozice = randrange(1,21)
+        # ----------herni strategie pocitace -------------------
+        if "o-o" in pole:
+            vybrana_pozice = pole.index("o-o") + 2
+        elif "-oo" in pole:
+            vybrana_pozice = pole.index("-oo") + 1
+        elif "oo-" in pole:
+            vybrana_pozice = pole.index("oo-") + 3
+        elif "x-x" in pole:
+            vybrana_pozice = pole.index("x-x") + 2
+        elif "-xx" in pole:
+            vybrana_pozice = pole.index("-xx") + 1
+        elif "xx-" in pole:
+            vybrana_pozice = pole.index("xx-") + 3
+        else:
+            vybrana_pozice = randrange(1,21)
+
         if pole[vybrana_pozice - 1] == "-":
             pole = tah(pole, vybrana_pozice, "o")
             print(pole)
@@ -83,3 +98,17 @@ def piskvorky1d(pole):
     else:
         print("Remiza! Konec hry!")
 piskvorky1d(pole)
+
+
+# def findx(pole):
+#     while "x-x" in pole == True:
+#         vybrana_pozice = "x-x"[-2]
+#     while "xx" in pozice == True:
+#         if "xx"[-3] == True:
+#             vybrana_pozice == "xx"[-3]
+#         elif "xx"[+1] == True:
+#             vybrana_pozice == "xx"[+1]
+#     while "oo"
+#     while "o-o"
+#     while "o"
+# tah_pocitace(pole)
