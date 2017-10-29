@@ -70,6 +70,10 @@ def tah_pocitace(pole):
             vybrana_pozice = pole.index("-xx") + 1
         elif "xx-" in pole:
             vybrana_pozice = pole.index("xx-") + 3
+        elif "o--" in pole:
+            vybrana_pozice = pole.index("o--") + 2
+        elif "--o" in pole:
+            vybrana_pozice = pole.index("--o") + 1
         else:
             vybrana_pozice = randrange(1,21)
 
@@ -98,17 +102,3 @@ def piskvorky1d(pole):
     else:
         print("Remiza! Konec hry!")
 piskvorky1d(pole)
-
-
-# def findx(pole):
-#     while "x-x" in pole == True:
-#         vybrana_pozice = "x-x"[-2]
-#     while "xx" in pozice == True:
-#         if "xx"[-3] == True:
-#             vybrana_pozice == "xx"[-3]
-#         elif "xx"[+1] == True:
-#             vybrana_pozice == "xx"[+1]
-#     while "oo"
-#     while "o-o"
-#     while "o"
-# tah_pocitace(pole)
