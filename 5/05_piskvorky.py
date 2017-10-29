@@ -8,12 +8,20 @@ from random import randrange
 
 pole = "-" * 20
 
+# for i in range(1, len(pole)):
+#     print(i % 10)
+
+
 def cislovani(pole):
     kolikcyklu = int(len(pole) / 10)
+    castcyklu = int(len(pole) % 10)
     for i in range(kolikcyklu):
         for i in range(1,10):
             print(i, end = "")
         print("0", end = "")
+    for i in range(1, castcyklu + 1):
+        print(i, end = "")
+
     print()
 
 
