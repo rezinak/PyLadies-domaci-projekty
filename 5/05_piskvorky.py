@@ -8,6 +8,16 @@ from random import randrange
 
 pole = "-" * 20
 
+def cislovani(pole):
+    kolikcyklu = int(len(pole) / 10)
+    for i in range(kolikcyklu):
+        for i in range(1,10):
+            print(i, end = "")
+        print("0", end = "")
+    print()
+
+
+
 def vyhodnot(pole):
     if "xxx" in pole:
         return "x"
@@ -37,6 +47,7 @@ def tah(pole, cislo_policka, symbol):
 def tah_hrace(pole):
     while True:
         vybrana_pozice = int(input("Napis cislo pole, na ktere chces hrat: "))
+        print()
         if vybrana_pozice > len(pole):
             print("Zadals cislo vyssi, nez je hraci pole. Zkus to lip!")
         elif vybrana_pozice <= 0:
@@ -45,6 +56,7 @@ def tah_hrace(pole):
             print("Policko uz je obsazene, musis jinam!")
         else:
             pole = tah(pole, vybrana_pozice, "x")
+            cislovani(pole)
             print(pole)
             return pole
 
@@ -70,6 +82,8 @@ def tah_pocitace(pole):
             vybrana_pozice = pole.index("-xx") + 1
         elif "xx-" in pole:
             vybrana_pozice = pole.index("xx-") + 3
+        elif "-x-" in pole:
+            vybrana_pozice = pole.index("-x-") + 3
         elif "o--" in pole:
             vybrana_pozice = pole.index("o--") + 2
         elif "--o" in pole:
@@ -80,6 +94,7 @@ def tah_pocitace(pole):
         if pole[vybrana_pozice - 1] == "-":
             pole = tah(pole, vybrana_pozice, "o")
             print(pole)
+            print()
             return pole
 
 # Napiš funkci piskvorky1d, která vytvoří řetězec s herním polem a střídavě volá funkce tah_hrace a
