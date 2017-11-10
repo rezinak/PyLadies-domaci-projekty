@@ -75,26 +75,16 @@ def tah_hrace(pole):
 def tah_pocitace(pole):
     while True:
         # ----------herni strategie pocitace -------------------
-        if "o-o" in pole:
-            vybrana_pozice = pole.index("o-o") + 2
-        elif "-oo" in pole:
-            vybrana_pozice = pole.index("-oo") + 1
-        elif "oo-" in pole:
-            vybrana_pozice = pole.index("oo-") + 3
-        elif "x-x" in pole:
-            vybrana_pozice = pole.index("x-x") + 2
-        elif "-xx" in pole:
-            vybrana_pozice = pole.index("-xx") + 1
-        elif "xx-" in pole:
-            vybrana_pozice = pole.index("xx-") + 3
-        elif "-x-" in pole:
-            vybrana_pozice = pole.index("-x-") + 1
-        elif "o--" in pole:
-            vybrana_pozice = pole.index("o--") + 2
-        elif "--o" in pole:
-            vybrana_pozice = pole.index("--o") + 1
+        hledame = None
+        for k in ["o-o", "-oo", "oo-", "x-x", "-xx", "xx-", "-x-", "o--", "--o"]:
+            if k in pole:
+                hledame = k
+                break
+        if hledame:
+            vybrana_pozice = pole.index(hledame) + hledame.index("-") + 1
         else:
-            vybrana_pozice = randrange(1,21)
+            vybrana_pozice = randrange(1, 21)
+
 
         if pole[vybrana_pozice - 1] == "-":
             pole = tah(pole, vybrana_pozice, "o")
