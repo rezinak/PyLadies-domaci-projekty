@@ -8,23 +8,10 @@ from random import randrange
 
 pole = "-" * 20
 
-# for i in range(1, len(pole)):
-#     print(i % 10)
-
-
 def cislovani(pole):
-    kolikcyklu = int(len(pole) / 10)
-    castcyklu = int(len(pole) % 10)
-    for i in range(kolikcyklu):
-        for i in range(1,10):
-            print(i, end = "")
-        print("0", end = "")
-    for i in range(1, castcyklu + 1):
-        print(i, end = "")
-
+    for i in range(1, len(pole) + 1):
+        print(i % 10, end="")
     print()
-
-
 
 def vyhodnot(pole):
     if "xxx" in pole:
@@ -101,7 +88,7 @@ def tah_pocitace(pole):
         elif "xx-" in pole:
             vybrana_pozice = pole.index("xx-") + 3
         elif "-x-" in pole:
-            vybrana_pozice = pole.index("-x-") + 3
+            vybrana_pozice = pole.index("-x-") + 1
         elif "o--" in pole:
             vybrana_pozice = pole.index("o--") + 2
         elif "--o" in pole:
