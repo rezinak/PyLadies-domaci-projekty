@@ -54,11 +54,17 @@ def tah(pole, cislo_policka, symbol):
 
 def tah_hrace(pole):
     while True:
-        zadanecislo = input("Napis cislo pole, na ktere chces hrat: ")
-        if not zadanecislo.isdigit():
+        try:
+            zadanecislo = input("Napis cislo pole, na ktere chces hrat: ")
+            vybrana_pozice = int(zadanecislo)
+        except KeyboardInterrupt:
+            print()
+            print("SRABE!!!!")
+            exit()
+        except ValueError:
             print("Nezadals cislo!")
             continue
-        vybrana_pozice = int(zadanecislo)
+
         print()
         if vybrana_pozice > len(pole):
             print("Zadals cislo vyssi, nez je hraci pole. Zkus to lip!")
