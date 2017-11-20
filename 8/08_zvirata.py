@@ -16,10 +16,7 @@ def begins_with():
 
 # 3. Napiš funkci, která dostane slovo a zjistí, jestli je v seznamu domácích zvířat.
 def find_animal(looking_for):
-        if looking_for in animals:
-            print(True)
-        else:
-            print(False)
+    return looking_for in animals
 
 # 4. Napiš funkci, která dostane dva seznamy jmen zvířat a vrátí tři seznamy:
 # (a) zvířata, která jsou v obou seznamech,
@@ -34,9 +31,11 @@ def sort_Lists(list1, list2):
     only_In_Second = []
 
     both.append(list(set(list1) & set(list2)))
+
     for zvire in list1:
         if zvire not in list2:
             only_In_First.append(zvire)
+
     for zvire in list2:
         if zvire not in list1:
             only_In_Second.append(zvire)
@@ -55,10 +54,11 @@ animals.sort()
 # (t.j. vrátí ["had", "pes", "andulka", "kočka", "králík"]).
 
 
-animals.append("Andulka")
-druhe_pismeno = []
-nove_zvire = []
+animals.append("andulka")
 
-for zvire in animals:
-    second_char = zvire[1]
-    print(second_char)
+def sort_by_second_char(seznam):
+    for zvire in animals:
+        def second_char(zvire):
+            return zvire[1]
+    seznam.sort(key=second_char)
+    return seznam
