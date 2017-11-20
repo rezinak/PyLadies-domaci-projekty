@@ -40,9 +40,7 @@ def sort_Lists(list1, list2):
         if zvire not in list1:
             only_In_Second.append(zvire)
 
-    print(both)
-    print(only_In_First)
-    print(only_In_Second)
+    return both, only_In_First, only_In_Second
 
 sort_Lists(animals, animals2)
 
