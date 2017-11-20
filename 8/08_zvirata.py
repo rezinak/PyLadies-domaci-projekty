@@ -30,16 +30,15 @@ def sort_Lists(list1, list2):
     only_In_First = []
     only_In_Second = []
 
-    both.append(list(set(list1) & set(list2)))
-
     for zvire in list1:
         if zvire not in list2:
             only_In_First.append(zvire)
+        elif zvire in list2:
+            both.append(zvire)
 
     for zvire in list2:
         if zvire not in list1:
             only_In_Second.append(zvire)
-
     return both, only_In_First, only_In_Second
 
 sort_Lists(animals, animals2)
@@ -50,8 +49,6 @@ animals.sort()
 # 6. Had byl pyšný na to, že je v abecedě první. Dokud nepřiletěla "andulka".
 # Abys hada uklidnila, vytvoř funkci, která zvířata seřadí podle abecedy, ale bude ignorovat první písmeno
 # (t.j. vrátí ["had", "pes", "andulka", "kočka", "králík"]).
-
-
 animals.append("andulka")
 
 def sort_by_second_char(seznam):
